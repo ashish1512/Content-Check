@@ -7,9 +7,8 @@ message.innerText="Done!"
     htmlDoc=parser.parseFromString(request.source, "text/html");
     text = htmlDoc.querySelectorAll('[class="_1mf _1mj"]');
     
-console.log(text[0].innerText);
 message.innerText=text[0].innerText;
-document.getElementById('message').style.display='none';
+//document.getElementById('message').style.display='none';
     var settings = {
   "async": true,
   "crossDomain": true,
@@ -60,6 +59,8 @@ $.ajax(settings).done(function (response) {
     }
   subjectivity1.innerText=response.subjectivity;
   irony1.innerText=response.irony;
+
+  
 });
 
   }
